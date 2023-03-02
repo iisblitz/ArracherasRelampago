@@ -41,17 +41,23 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
+  grid-template-columns: repeat(5, minmax(20%, auto));
   width: var(--max-width);
   max-width: 100%;
+  background-color: #444444;
+  color: white;
+  border-color: black;
 }
 
 .card {
   padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
+  border-color: black;
+  color: yellow;
+  text-align: center;
+  align-items: center;
 }
 
 .card span {
@@ -97,7 +103,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -125,7 +131,7 @@
 
 .thirteen::before,
 .thirteen::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
 }
@@ -253,7 +259,8 @@
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
   .grid {
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(5, 20%);
+    background-color: #444444;
   }
 }
 
