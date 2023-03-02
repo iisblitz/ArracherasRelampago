@@ -5,6 +5,12 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  text-align: center;
+  background-color: black;
+  color: black;
+  background-image: url("../resources/imagenes/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .description {

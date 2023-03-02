@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import logo from '../resources/imagenes/logo.png'
+import Image from 'next/image';
 
 function Header() {
   const router = useRouter();
@@ -14,12 +16,12 @@ function Header() {
     <header>
       <nav>
         <ul>
-        <li><Link className={router.pathname === '/' ? 'active' : ''} href="/"> Logo placeholder</Link></li>
-        <li><Link className={router.pathname === '/Menu' ? 'active' : ''} href="/Menu">Menu</Link></li>
+        <li><Link className={router.pathname === '/' ? 'active' : ''} href="/"> <Image src={logo} height={50} width={50}></Image></Link></li>
+        <li><Link className={router.pathname === '/menu' ? 'active' : ''} href="/menu">Menu</Link></li>
         <li><Link className={router.pathname === '/galeria' ? 'active' : ''} href="/galeria">Galeria</Link></li>
-        <li><Link className={router.pathname === '/sobre nosotros' ? 'active' : ''} href="/nosotros">Sobre Nosotros</Link></li>
-        <li><Link className={router.pathname === '/contactanos' ? 'active' : ''} href="/contactanos">Contactanos</Link></li>
-        <li><Link className={router.pathname === '/calendario' ? 'active' : ''} href="/calendario">Calendario</Link></li>
+        <li><Link className={router.pathname === '/sobre nosotros' ? 'active' : ''} href="/aboutus">Sobre Nosotros</Link></li>
+        <li><Link className={router.pathname === '/contactanos' ? 'active' : ''} href="/contactus">Contactanos</Link></li>
+        <li><Link className={router.pathname === '/calendario' ? 'active' : ''} href="/calendar">Calendario</Link></li>
         </ul>
       </nav>
       <button onClick={toggleMenu}>Menu</button>
@@ -27,11 +29,11 @@ function Header() {
         <nav className="mobile-menu">
         <ul>
         <li><Link className={router.pathname === '/' ? 'active' : ''} href="/"> Logo placeholder</Link></li>
-        <li><Link className={router.pathname === '/Menu' ? 'active' : ''} href="/Menu">Menu</Link></li>
+        <li><Link className={router.pathname === '/menu' ? 'active' : ''} href="/menu">Menu</Link></li>
         <li><Link className={router.pathname === '/galeria' ? 'active' : ''} href="/galeria">Galeria</Link></li>
-        <li><Link className={router.pathname === '/sobre nosotros' ? 'active' : ''} href="/nosotros">Sobre Nosotros</Link></li>
-        <li><Link className={router.pathname === '/contactanos' ? 'active' : ''} href="/contactanos">Contactanos</Link></li>
-        <li><Link className={router.pathname === '/calendario' ? 'active' : ''} href="/calendario">Calendario</Link></li>
+        <li><Link className={router.pathname === '/sobre nosotros' ? 'active' : ''} href="/aboutus">Sobre Nosotros</Link></li>
+        <li><Link className={router.pathname === '/contactanos' ? 'active' : ''} href="/contactus">Contactanos</Link></li>
+        <li><Link className={router.pathname === '/calendario' ? 'active' : ''} href="/calendar">Calendario</Link></li>
         </ul>
         </nav>
       )}
@@ -39,7 +41,7 @@ function Header() {
         header {
           position: fixed;
           top: 0;
-          left: 0;
+          
           width: 100%;
           display: flex;
           justify-content: space-between;
@@ -47,6 +49,7 @@ function Header() {
           background-color: #333;
           color: yellow;
           padding: 10px;
+          
         }
 
         nav ul {
