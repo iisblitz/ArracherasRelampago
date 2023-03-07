@@ -15,27 +15,26 @@ function Header() {
   return (
     <header>
       <nav>
-      <Link className={router.pathname === '/' ? 'active' : ''} href="/"> <Image src={logo} height={50} width={50} alt='logo'></Image></Link>
-        <div className="space"/>
+        <Link className={router.pathname === '/' ? 'active' : ''} href="/"> <Image src={logo} height={50} width={50} alt='logo'></Image></Link>
         <ul>
-        <li><Link className={router.pathname === '/menu' ? 'active' : ''} href="/menu">Menu</Link></li>
-        <li><Link className={router.pathname === '/galeria' ? 'active' : ''} href="/galeria">Galeria</Link></li>
-        <li><Link className={router.pathname === '/sobre nosotros' ? 'active' : ''} href="/aboutus">Sobre Nosotros</Link></li>
-        <li><Link className={router.pathname === '/contactanos' ? 'active' : ''} href="/contactus">Contactanos</Link></li>
-        <li><Link className={router.pathname === '/calendario' ? 'active' : ''} href="/calendar">Calendario</Link></li>
+          <li><Link className={router.pathname === '/menu' ? 'active' : ''} href="/menu">Menu</Link></li>
+          <li><Link className={router.pathname === '/galeria' ? 'active' : ''} href="/galeria">Galeria</Link></li>
+          <li><Link className={router.pathname === '/sobre nosotros' ? 'active' : ''} href="/aboutus">Sobre Nosotros</Link></li>
+          <li><Link className={router.pathname === '/contactanos' ? 'active' : ''} href="/contactus">Contactanos</Link></li>
+          <li><Link className={router.pathname === '/calendario' ? 'active' : ''} href="/calendar">Calendario</Link></li>
         </ul>
       </nav>
       <button onClick={toggleMenu}>Menu</button>
       {isMenuOpen && (
         <nav className="mobile-menu">
-       <Link className={router.pathname === '/' ? 'active' : ''} href="/"> Logo placeholder</Link>
-        <ul>
-        <li><Button><Link className={router.pathname === '/menu' ? 'active' : ''} href="/menu">Menu</Link></Button></li>
-        <li><Button><Link className={router.pathname === '/galeria' ? 'active' : ''} href="/galeria">Galeria</Link></Button></li>
-        <li><Button><Link className={router.pathname === '/sobre nosotros' ? 'active' : ''} href="/aboutus">Sobre Nosotros</Link></Button></li>
-        <li><Button><Link className={router.pathname === '/contactanos' ? 'active' : ''} href="/contactus">Contactanos</Link></Button></li>
-        <li><Button><Link className={router.pathname === '/calendario' ? 'active' : ''} href="/calendar">Calendario</Link></Button></li>
-        </ul>
+          <Link className={router.pathname === '/' ? 'active' : ''} href="/"> Logo placeholder</Link>
+          <ul>
+            <li><button><Link className={router.pathname === '/menu' ? 'active' : ''} href="/menu">Menu</Link></button></li>
+            <li><button><Link className={router.pathname === '/galeria' ? 'active' : ''} href="/galeria">Galeria</Link></button></li>
+            <li><button><Link className={router.pathname === '/sobre nosotros' ? 'active' : ''} href="/aboutus">Sobre Nosotros</Link></button></li>
+            <li><button><Link className={router.pathname === '/contactanos' ? 'active' : ''} href="/contactus">Contactanos</Link></button></li>
+            <li><button><Link className={router.pathname === '/calendario' ? 'active' : ''} href="/calendar">Calendario</Link></button></li>
+          </ul>
         </nav>
       )}
       <style jsx>{`
@@ -55,17 +54,18 @@ function Header() {
         nav{
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
+          width: 100%;
+          align-items: center;
         }
+        
 
         nav ul {
           display: flex;
           flex-direction: row;
           align-items: center;
           color:yellow;
-          left: auto;
           text-align:center;
-          background-color:black; 
+          margin-left: auto;
         }
         
 
@@ -106,9 +106,6 @@ function Header() {
           border: 1px solid rgba(var(--card-border-rgb), 0.15);
         }
 
-        .space{
-          width:80vw;
-        }
 
         @media (max-width: 768px) {
           nav ul {

@@ -3,8 +3,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Header from '@/components/headers'
 import aboutus from '../resources/imagenes/aboutus.jpg'
-import calendar from '../resources/imagenes/calendar.jpeg'
-import contact from '../resources/imagenes/contact.png'
+import calendar from '../resources/imagenes/calendar.png'
+import contact from '../resources/imagenes/contact.jpg'
 import menu from '../resources/imagenes/menu.jpg'
 import gallery from '../resources/imagenes/gallery.jpg'
 import logo from '../resources/imagenes/logo.png'
@@ -102,10 +102,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <p>&copy; 2023 Arracheras Relampago.</p>
-      </footer>
     </div>
   )
 }
