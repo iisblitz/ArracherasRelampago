@@ -10,18 +10,37 @@
   color: black;
   background-image: url("../resources/imagenes/background.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
+  background-position: 50% 50%;
+}
+.centro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #00000066;
+  align-items: center;
+  padding: 1rem;
 }
 
 .description {
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
-  font-size: 0.85rem;
+  font-size: 2 rem;
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
+  color: yellow;
+  padding: 2rem;
+}
+
+.center .logo {
+  padding-left: 2rem;
+}
+.card img {
+  max-width: 80%;
+  max-height: width;
 }
 
 .description a {
@@ -62,8 +81,6 @@
   transition: background 200ms, border 200ms;
   border-color: black;
   color: yellow;
-  text-align: center;
-  align-items: center;
 }
 
 .card span {
@@ -161,6 +178,14 @@
     rgba(var(--tile-end-rgb), 1)
   );
   background-clip: content-box;
+}
+
+.title {
+  color: yellow;
+  margin: 3rem;
+  background-color: #00000066;
+  border-radius: 3rem;
+  padding: 0.1rem;
 }
 
 /* Enable hover only on non-touch devices */
