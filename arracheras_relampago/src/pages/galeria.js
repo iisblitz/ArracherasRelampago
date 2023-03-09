@@ -1,13 +1,23 @@
 import styles from '../styles/Galeria.module.css'
+import Header from '@/components/Headers';
+import ImageCarousel from '../components/carousel'
+
 
 const Gallery = () => {
-    return ( <div>Bienvenido a nuestra galería, aquí podrás encontrar algunas de las fotos de nuestros platillos más deliciosos y de los eventos que hemos tenido el honor de ser parte.
+    return (
+        
+        <main className={styles.main}>
+        <Header></Header>
 
-        Nuestro enfoque principal siempre ha sido la calidad y el sabor en cada uno de nuestros platillos. Podrás ver nuestras famosas arracheras, alambres, burritos, chapatas, ensaladas, tacos, entre otros. Cada platillo está preparado con los mejores ingredientes y con la pasión y dedicación que nos caracteriza.
+        <h1 className={styles.title}>Galeria</h1>
         
-        También podrás ver algunas de las fotos de los eventos que hemos tenido el placer de atender. Desde pequeñas reuniones hasta grandes eventos, estamos comprometidos en hacer de cada evento algo especial y único. Nuestro equipo de profesionales se asegura de que cada detalle esté cuidado y que nuestros platillos sean un éxito rotundo en cada ocasión.
+        <p className={styles.centro}>Bienvenido a nuestra galería de platillos deliciosos y eventos especiales. Preparamos arracheras, tacos, ensaladas y más con los mejores ingredientes y pasión. Desde pequeñas reuniones hasta grandes eventos, haremos de tu ocasión algo especial y único. ¡Contáctanos para probar nuestros platillos!
+        </p>
         
-        Esperamos que disfrutes de nuestra galería y si te animas a probar alguno de nuestros platillos, ¡no dudes en contactarnos! Estaremos encantados de atenderte.</div> );
+        <ImageCarousel className={styles.Carousel}></ImageCarousel>
+
+
+        </main> );
 }
  
 export default Gallery;

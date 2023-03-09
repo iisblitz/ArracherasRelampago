@@ -18,6 +18,8 @@
   padding: 0.85rem;
   color: yellow;
   width: 75vw;
+  overflow-y: scroll;
+  text-align: left;
 }
 
 .centro h2 {
