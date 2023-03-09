@@ -1,3 +1,5 @@
+import styles from '../styles/Galeria.module.css'
+
 const Gallery = () => {
     return ( <div>Bienvenido a nuestra galería, aquí podrás encontrar algunas de las fotos de nuestros platillos más deliciosos y de los eventos que hemos tenido el honor de ser parte.
 
